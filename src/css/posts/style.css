@@ -1,0 +1,282 @@
+@import "slider.css";
+
+html, body {
+  margin: 0;
+  background-color: #000000;
+}
+
+/* Initial layout for min width 420 px and max width 599 px (Iphone 13 Pro Max) */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 600px 220px;
+  grid-template-areas: 
+  "hd"
+  "main"
+  "ft";
+  color: rgb(255, 255, 255);
+  font-family: 'Inter';
+  text-align: center;
+}
+  
+.box {
+  background: #222222;
+  padding: 30px;
+}
+
+/* Header */
+
+.header {
+  grid-area: hd;
+  text-align: center;
+  background: black;
+}
+
+.header h1 {
+  font-size: 32px;
+  text-decoration: underline;
+  text-decoration-thickness: 30px;
+  text-underline-offset: 10px;
+  text-decoration-skip-ink: none;
+}
+
+.header ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+  margin-right: 40px;
+}
+
+.header ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.header ul li {
+  display: inline-block;
+  padding: 15px 8px;
+}
+
+.header ul li a:hover {
+  opacity: 1;
+}
+
+/* Main content area */
+
+.swiper h2 {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.swiper {
+  grid-area: main;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.swiper h2 {
+  position: absolute;
+  text-align: center;
+  top: 80%;
+}
+.swiper p {
+  position: absolute;
+  text-align: center;
+  top: 88%;
+}
+
+.swiper-pagination {
+  margin-top: 120px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+/* Footer */
+
+.footer {
+  grid-area: ft;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgb(99, 99, 99), black);
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 7px;
+  color: white;
+}
+
+.footer .social a {
+  font-size: 20px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 20%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+.footer .social a:hover {
+  opacity: 0.9;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 3;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+}
+
+.footer .copyright {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 9px;
+  color: #aaa;
+}
+
+.social {
+  padding-top: 20px;
+}
+
+.footer ul li {
+  padding: 0 8px;
+}
+
+  /* Tablet view (IPad) */
+  
+  @media(min-width:600px) and (max-width:900px) {
+
+    .container {
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 150px 700px 220px;
+      grid-template-areas: 
+      "hd"
+      "main"
+      "ft";
+  }
+
+  .swiper {
+    padding-top: 0;
+    width: 50%;
+    height: 95%;
+  }
+}
+
+  /* Landscape */
+  
+@media(min-width:900px) and (max-width:1279px) {
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 700px 220px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "ft";
+  }
+
+  .swiper {
+      width: 35%;
+      height: 90%;
+  }
+}
+
+/* Laptop 15" */
+
+@media(min-width:1280px) and (max-width:1919px) {
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 700px 220px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "ft";
+  }
+  
+  /* Main content area */
+
+  .swiper {
+    width: 30%;
+    height: 100%;
+  }
+
+  .swiper h2 {
+    position: absolute;
+    text-align: center;
+    top: 82%;
+  }
+  .swiper p {
+    position: absolute;
+    text-align: center;
+    top: 90%;
+  }
+}
+
+  /* HD TV 1080*/
+
+  @media(min-width:1920px) and (max-width:3839px){
+  
+    .container {
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 150px 700px 220px;
+      grid-template-areas: 
+      "hd"
+      "main"
+      "ft";
+    }
+
+      /* Main content area */
+
+  .swiper {
+    margin-top: 100px;
+    width: 30%;
+    height: 100%;
+  }
+
+  .swiper h2 {
+    position: absolute;
+    text-align: center;
+    top: 82%;
+  }
+  .swiper p {
+    position: absolute;
+    text-align: center;
+    top: 90%;
+  }
+
+  .swiper-pagination {
+    margin-top: 160px;
+  }
+}

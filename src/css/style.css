@@ -1,0 +1,476 @@
+@import "header.css";
+@import "footer.css";
+@import "subscribe.css";
+
+html, body{
+  margin: 0;
+}
+
+/* Initial layout for min width 321 px and max width 599 px */
+
+.container {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 170px 750px 700px 170px;
+  grid-template-areas: 
+  "hd"
+  "main"
+  "sd"
+  "ft";
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI';
+  text-align: center;
+  }
+    
+.box {
+  background: #222222;
+  padding: 30px;
+}    
+
+.header {
+  text-align: center;
+  background: black;
+}
+
+/* Main content */
+
+.content {
+  grid-area: main;
+  background: linear-gradient(to bottom, rgb(160, 0, 133), black, black);
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.card1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 310px 130px 70px;
+  grid-template-areas: 
+  "img" 
+  "txt";
+  border-radius: 12px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.card1-img {
+  grid-area: img;
+  background: url("../img/artwork1.jpeg");
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-size: cover;
+}
+
+.card1-txt {
+  grid-area: txt;
+  margin: 15px;
+  line-height: 15px;
+  color:rgba(0, 0, 0, 0.9)
+}
+
+.button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #000000;
+}
+
+.button1:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.card1-txt h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.card1-txt p {
+  color:rgba(0, 0, 0, 0.9); 
+  font-size: 16px;
+  font-weight: 350;
+}
+
+.card1-txt .date {
+  color: black;
+  font-size: 15px;
+  opacity: 60%;  
+}
+
+.card1:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 3px 12px rgba(139, 139, 139, 0.4);
+}
+
+/* Sidebar nested grid - Favorite posts mini gallery */
+
+.side {
+  grid-area: sd;
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.side h4 {
+  font-size: 18px;
+}
+
+.nested {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px;
+  font-size: 15px;
+  border-radius: 12px;
+  background: rgb(0, 0, 0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px;
+  color: white;
+  line-height: 0;
+}
+
+.mini1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px;
+  grid-template-areas: 
+  "img" 
+  "txt";
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.mini1-img {
+  grid-area: img;
+  background: url("../img/artwork2.jpeg");
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mini2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px;
+  grid-template-areas: 
+  "img" 
+  "txt";
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.mini2-img {
+  grid-area: img;
+  background: url("../img/artwork3.jpeg");
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mini3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px;
+  grid-template-areas: 
+  "img" 
+  "txt";
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.mini3-img {
+  grid-area: img;
+  background: url("../img/artwork4.jpeg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mini4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 210px;
+  grid-template-areas: 
+  "img" 
+  "txt";
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.mini4-img {
+  grid-area: img;
+  background: url("../img/artwork5.jpeg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mini1-img:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 3px 12px rgba(80, 80, 80, 0.4);
+}
+
+.mini2-img:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 3px 12px rgba(80, 80, 80, 0.4);
+}
+
+.mini3-img:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 3px 12px rgba(80, 80, 80, 0.4);
+}
+.mini4-img:hover {
+  transform: scale(1.02);
+  box-shadow: 3px 3px 12px rgba(80, 80, 80, 0.4);
+}
+
+/* Footer Theme Coloring */
+
+.footer {
+  grid-area: ft;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgb(160, 0, 133), black);
+}
+
+/* Small screen */ 
+
+@media(max-width:428px) {
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 500px 500px 220px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI';
+    text-align: center;
+  }
+
+  .header {
+    grid-area: hd;
+    text-align: center;
+    background: black;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header ul {
+    list-style: none;
+    font-size: 14px;
+    line-height: 3;
+    text-align: center;
+    margin-right: 40px;
+  }
+
+  .header ul li {
+    display: inline-block;
+  }
+
+  .content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .content h2 {
+    line-height: 1;
+    font-size: 18px;
+  }
+
+  .card1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 190px 80px 80px;
+    grid-template-areas: 
+    "img" 
+    "txt";
+    border-radius: 12px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    transition: 0.5s ease;
+  }
+
+  .card1-txt h3 {
+    font-size: 16px;
+    line-height: 0px;
+  }
+  
+  .card1-txt p {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  
+  .card1-txt .date {
+    font-size: 12px;
+    line-height: 0px;
+  }
+
+  .side {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .nested {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px;
+    border-radius: 12px;
+    background: rgb(0, 0, 0);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 10px;
+    line-height: 0;
+  }
+
+  .mini1 {
+    grid-template-rows: 150px;
+  }
+  .mini2 {
+    grid-template-rows: 150px;
+  }
+  .mini3 {
+    grid-template-rows: 150px;
+  }
+  .mini4 {
+    grid-template-rows: 150px;
+  }
+
+  .footer {
+    grid-area: ft;
+    padding: 0;
+    background: linear-gradient(to bottom, rgb(160, 0, 133), black);
+  }
+
+  .footer ul {
+    font-size: 12px;
+  }
+  
+  .footer .copyright {
+    font-size: 7px;
+  }
+
+  .wrapper {
+    height: 30px;
+    width: 100px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 160px;
+    left: 89px;
+  }
+
+  .social {
+    padding-top: 60px;
+  }
+
+  .footer ul li {
+    padding: 0 8px;
+  }
+}
+
+/* Tablet view */
+
+@media(min-width:600px) and (max-width:900px) {
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 700px 700px 170px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "sd"
+    "ft";
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI';
+    text-align: center;
+  }
+    
+  .header {
+    grid-area: hd;
+    text-align: center;
+    background: black;
+  }
+
+  .footer {
+    grid-area: ft;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgb(160, 0, 133), black);
+  }
+}
+
+
+/* If Screen Is Wide Enough */
+
+@media(min-width:901px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 170px 700px 170px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "main main main main main sd sd sd"
+    "ft ft ft ft ft ft ft ft";
+  }
+
+  .header {
+    grid-area: hd;
+    text-align: center;
+    background: black;
+  }
+  
+  .header h1 {
+    font-size: 35px;
+    text-align: left;
+    padding-left: 300px;
+  }
+
+  .header ul {
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
+    padding-right: 175px;
+  }
+
+  .content {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  .footer {
+    grid-area: ft;
+    padding: 20px 590px 20px 20px;
+    background: linear-gradient(to bottom, rgb(160, 0, 133), black);
+  }
+}
