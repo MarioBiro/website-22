@@ -65,7 +65,7 @@ html, body{
 
 .content {
   grid-area: main;
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), black,rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
 }
 
 .date {
@@ -378,7 +378,12 @@ blockquote {
         align-items: center;
         justify-content: center;
       }
-        
+      
+      .content {
+        grid-area: main;
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
+      }
+
       .content {
         text-align: center;
       }
@@ -436,6 +441,11 @@ blockquote {
     margin: auto;
     align-items: center;
     justify-content: center;
+  }
+
+  .content {
+    grid-area: main;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
   }
 
   .content h2 {
@@ -525,6 +535,11 @@ blockquote {
 
   .content h3 {
     font-size: 32px;
+  }
+
+  .content {
+    grid-area: main;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
   }
 
   h4 {
