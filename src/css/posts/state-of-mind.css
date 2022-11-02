@@ -2,12 +2,35 @@ html, body{
   margin: 0;
 }
 
+/* Button */
+
+a.button1{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+  margin-top: 100px;
+  }
+  a.button1:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+  }
+ 
+
 /* Initial layout for min width 420 px and max width 599 px (Iphone 13 Pro Max) */
 
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 150px 3700px 220px;
+  grid-template-rows: 150px 3900px 220px;
   grid-template-areas: 
   "hd"
   "main"
@@ -219,7 +242,7 @@ blockquote {
   .container {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 3600px 220px;
+    grid-template-rows: 150px 3900px 220px;
     grid-template-areas: 
     "hd"
     "main"
